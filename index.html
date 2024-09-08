@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Computadoras</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        /* Navegación */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #495057;
+            padding: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sección de productos */
+        .container {
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+            color: #343a40;
+        }
+        .products {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .product {
+            width: 30%;
+            margin-bottom: 30px;
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .product h3 {
+            margin: 20px 0;
+            font-size: 1.5em;
+            color: #007bff;
+        }
+        .product p {
+            font-size: 1.1em;
+            color: #666;
+        }
+        .product .price {
+            font-size: 1.3em;
+            color: #28a745;
+            margin: 15px 0;
+        }
+        .buy-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .buy-btn:hover {
+            background-color: #218838;
+        }
+
+        /* Sección de contacto */
+        .contact {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: #333;
+        }
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .contact input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        .contact input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Venta de Computadoras</h1>
+    </header>
+
+    <nav>
+        <a href="#products">Productos</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+
+    <div class="container">
+        <!-- Sección de Productos -->
+        <section id="products" class="products">
+            <h2>Nuestros Productos</h2>
+
+            <!-- Producto 1 -->
+            <div class="product">
+                <img src="img.jpg" width="300px" height="200px" alt="Laptop Pro">
+                <h3>Laptop HP</h3>
+                <p>Laptop con i5 11th generación, 16gb de ram y una ssd de 1tb</p>
+                <div class="price">₡425000</div>
+                <button class="buy-btn">Comprar</button>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="product">
+                <img src="images.jpg" width="300px" height="200px" alt="PC Gamer">
+                <h3>PC Gamer</h3>
+                <p>PC de escritorio con un ryzen 7, 32 gb de ram, 1tb de ssd y una tarjeta grafica nvidia 4090</p>
+                <div class="price">₡500000</div>
+                <button class="buy-btn">Comprar</button>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="product">
+                <img src="eyey.jpg" width="300px" height="200px"  alt="Laptop Estudiante">
+                <h3>Laptop para Estudiantes</h3>
+                <p>Laptop ideal para estudiantes, con procesador i3 5th generacion, 8gb ram y 256 de ssd</p>
+                <div class="price">₡250000</div>
+                <button class="buy-btn">Comprar</button>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contact" class="contact">
+            <h2>Contáctanos</h2>
+            <form action="#" method="post">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <input type="submit" value="Enviar Mensaje">
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Venta de Computadoras. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
